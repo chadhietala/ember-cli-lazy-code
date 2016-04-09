@@ -43,9 +43,16 @@
     "ember-addon"
   ],
   "dependencies": {
-    "ember-cli-babel": "^5.1.5"
+    "babel-core": "^6.7.6",
+    "babel-traverse": "^6.7.6",
+    "broccoli-merge-trees": "^1.1.1",
+    "broccoli-persistent-filter": "^1.2.0",
+    "broccoli-stew": "^1.2.0",
+    "ember-cli-babel": "^5.1.5",
+    "magic-string": "^0.11.1"
   },
   "ember-addon": {
-    "configPath": "tests/dummy/config"
+    "configPath": "tests/dummy/config",
+    "after": "ember-cli-uglify"
   }
 }
