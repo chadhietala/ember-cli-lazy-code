@@ -13,8 +13,10 @@ module.exports = {
   },
   postprocessTree: function(type, tree) {
     if (type === 'all') {
-      var app = find(tree, { include: ['assets/' + this.app.name + '.js']});
+      var appName = this.app.name;
+      var app = find(tree, { include: ['assets/' + appName + '.js']});
       var lazyApp = new LazyCode(app, {
+        wrapInIIFE: [appName + '/config/environment'],
         description: 'ember-cli-lazy-code'
       });
 
