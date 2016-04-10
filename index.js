@@ -17,6 +17,7 @@ module.exports = {
       var app = find(tree, { include: ['assets/' + appName + '.js']});
       var lazyApp = new LazyCode(app, {
         wrapInIIFE: [appName + '/config/environment'],
+        mode: this.app.options.lazyCode && this.app.options.lazyCode.mode || 'function',
         description: 'ember-cli-lazy-code'
       });
 
