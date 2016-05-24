@@ -53,6 +53,7 @@
   },
   "ember-addon": {
     "configPath": "tests/dummy/config",
-    "after": "ember-cli-uglify"
+    "after": "ember-cli-uglify",
+    "before": "broccoli-asset-rev"
   }
 }
