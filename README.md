@@ -54,7 +54,7 @@ After the build, all app's AMD modules will be in this format by default:
 }
 ```
 
-There are also other modes that this addon functions in but currently it is only tested in `strings` mode.
+This addon only supports the `strings` mode currently. In future, we may add variations to this.
 
 Since the format of the modules has been changed, we need to teach the [loader.js](https://github.com/kratiahuja/loader.js/blob/master/lib/loader/loader.js#L284) to recognize this new format.
 

@@ -11,6 +11,7 @@ module.exports = {
   included: function(app) {
     this.app = app;
   },
+
   postprocessTree: function(type, tree) {
     if (type === 'all') {
       var appName = this.app.name;
@@ -18,6 +19,7 @@ module.exports = {
       var lazyApp = new LazyCode(app, {
         wrapInIIFE: [appName + '/config/environment'],
         mode: this.app.options.lazyCode && this.app.options.lazyCode.mode || 'strings',
+        appName: appName, // assuming appName is always same as config.modulePrefix
         description: 'ember-cli-lazy-code'
       });
 
